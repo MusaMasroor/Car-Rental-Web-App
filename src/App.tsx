@@ -1,16 +1,11 @@
-import Navbar from "./components/navbar.tsx";
-import AddToDo from "./components/addToDo.tsx";
-import Todos from "./components/todos.tsx";
-import "./App.css"
 
-const App = () => {
+const App:React.FC = () => {
   return (
-   <main>
-      <h1>TODO REACT + TYPESCRIPT </h1>
-      <Navbar />
-      <AddToDo />
-      <Todos />
-   </main>
+    <>
+    <div className="App">
+        <h1>Task Manager</h1>
+       
+        </div></>
   )
 }
 
