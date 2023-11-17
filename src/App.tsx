@@ -1,12 +1,10 @@
-
-const App:React.FC = () => {
+import Counter from "./Features/counter/Counter";
+const App: React.FC = () => {
   return (
-    <>
     <div className="App">
-        <h1>Task Manager</h1>
-       
-        </div></>
-  )
-}
+      <Counter />
+    </div>
+  );
+};
 
-export default App
+export default App;
