@@ -6,13 +6,16 @@ import { db } from "@/lib/db";
 import { compare } from "bcrypt";
 import { Role } from "@prisma/client";
 
-export const authOptions: NextAuthOptions = {
+const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(db),
-  secret: process.env.NEXT_AUTH_SECRET_KEY,
 
   session: {
     strategy: "jwt",
   },
+
+  secret: process.env.NEXT_AUTH_SECRET_KEY,
+
+  debug: process.env.NODE_ENV === "development",
 
   pages: {
     signIn: "/sign-in",
@@ -91,35 +94,3 @@ export const authOptions: NextAuthOptions = {
 };
 const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST };
-
-// callbacks: {
-//   async jwt({ token, user, session }) {
-//     console.log("jwt callback", { token, user, session });
-//     if (user) {
-//       const modifiedToken = {
-//         ...token,
-//         id: user.id,
-//       };
-
-//       console.log("Modified Token:", modifiedToken);
-
-//       return modifiedToken;
-//     }
-
-//     return token;
-//   },
-//   async session({ session, token, user }) {
-//     console.log("session callback", { session, token, user });
-
-//     return {
-//       ...session,
-//       user: {
-//         ...session.user,
-//         id: token.id,
-//       },
-//     };
-//     return session;
-//   },
-// },
-
-// debug: process.env.NODE_ENV === "development",
