@@ -1,4 +1,15 @@
-import { Hero, SearchBar, CustomFilter, CarCard, ShowMore } from "@/components";
+import {
+  Hero,
+  SearchBar,
+  CustomFilter,
+  CarCard,
+  ShowMore,
+  About,
+  Testimonials,
+  Contact,
+  Navbar,
+  Footer,
+} from "@/components";
 import { fetchCars } from "@/utils";
 import { HomeProps } from "@/types";
 import { fuels, yearsOfProduction } from "@/constants";
@@ -14,10 +25,11 @@ export default async function Home({ searchParams }: HomeProps) {
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
   return (
     <main className="overflow-hidden">
+      <Navbar />
       <Hero />
       <div className="mt-12 padding-x padding-y max-width" id="discover">
         <div className="home__text-container">
-          <h1 className="text-4xl font-extrabold">Car Catalogue</h1>
+          <h1 className="text-4xl font-extrabold ">Car Catalogue</h1>
           <p>Explore out cars you might like</p>
         </div>
 
@@ -49,6 +61,16 @@ export default async function Home({ searchParams }: HomeProps) {
           </div>
         )}
       </div>
+      <div className="mt-12 padding-x padding-y max-width">
+        <About />
+      </div>
+      <div className="mt-12 padding-x padding-y max-width">
+        <Testimonials />
+      </div>
+      <div className="mt-12 padding-x padding-y max-width">
+        <Contact />
+      </div>
+      <Footer />
     </main>
   );
 }

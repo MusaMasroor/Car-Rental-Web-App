@@ -52,3 +52,43 @@ export interface CustomFilterProps {
   title: string;
   options: OptionProps[];
 }
+declare module "next-auth" {
+  interface User {
+    roles: string;
+  }
+  interface Session {
+    user: User & {
+      roles: string;
+    };
+    token: {
+      roles: string;
+    };
+  }
+}
+
+export interface RentFormData {
+  name: string;
+  email: string;
+  phone: string;
+  address: string;
+}
+
+export interface RentData {
+  name: string;
+  email: string;
+  phone: string;
+  address: string;
+  car: CarProps;
+}
+export interface LogInUser {
+  firstName: string;
+  lastName: string;
+  email: string;
+}
+export interface ContactUs {
+  name: string;
+  email: string;
+  phone: string;
+  address: string;
+  message: string;
+}

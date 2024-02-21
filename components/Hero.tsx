@@ -1,7 +1,9 @@
 "use client";
+import { useEffect } from "react";
+import Typed from "typed.js";
 import Image from "next/image";
 import CustomButton from "./CustomButton";
-import { TypedText } from ".";
+
 const Hero = () => {
   const handleScroll = () => {
     const nextSection = document.getElementById("discover");
@@ -10,6 +12,27 @@ const Hero = () => {
       nextSection.scrollIntoView({ behavior: "smooth" });
     }
   };
+  useEffect(() => {
+    // Create a new instance of Typed.js
+    const options = {
+      strings: [
+        "Streamline your car",
+        "rental experience",
+        "with",
+        "our effortless",
+        "booking process.",
+      ],
+      typeSpeed: 40,
+      backSpeed: 20,
+      loop: true,
+    };
+    const typed = new Typed(".typed-text", options);
+
+    // Cleanup on component unmount
+    return () => {
+      typed.destroy();
+    };
+  }, []); // Empty dependency array ensures useEffect runs once
   return (
     <div className="hero">
       <div className="flex-1 pt-36 padding-x">
@@ -18,12 +41,12 @@ const Hero = () => {
         </h1>
 
         <p className="hero__subtitle">
-          <TypedText />
+          <span className="typed-text"></span>
         </p>
 
         <CustomButton
           title="Explore Cars"
-          containerStyles="bg-primary-blue text-white rounded-full mt-10"
+          containerStyles="bg-red-700 text-white rounded-full mt-10"
           handleClick={handleScroll}
         />
       </div>
