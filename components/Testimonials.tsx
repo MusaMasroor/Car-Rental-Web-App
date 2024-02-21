@@ -20,10 +20,10 @@ const Testimonials = () => {
                   height={80}
                 />
                 <p className="leading-relaxed">
-                  I've tried many car rental apps, but this one stands out. The
-                  interface is intuitive, the prices are competitive, and the
-                  customer service is exceptional. Will definitely be using it
-                  again!
+                  I&apos;ve tried many car rental apps, but this one stands out.
+                  The interface is intuitive, the prices are competitive, and
+                  the customer service is exceptional. Will definitely be using
+                  it again!
                 </p>
                 <span className="inline-block h-1 w-10 rounded bg-indigo-500 mt-6 mb-4"></span>
                 <h2 className=" font-semibold title-font tracking-wider text-sm">
@@ -62,7 +62,7 @@ const Testimonials = () => {
                 />
                 <p className="leading-relaxed">
                   I travel frequently for work, and this car rental app has
-                  become my go-to solution. It's reliable, convenient, and
+                  become my go-to solution. It&apos;s reliable, convenient, and
                   offers a wide range of vehicles to suit my needs. Highly
                   recommended for anyone on the go!
                 </p>

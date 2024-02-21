@@ -17,9 +17,9 @@ const About = () => {
               </h2>
               <p className="mb-4 text-base leading-7 text-black-100 ">
                 At our car rental company, we prioritize providing exceptional
-                services to our customers. Whether you're planning a weekend
-                getaway or a business trip, we ensure your experience with us is
-                nothing short of excellent.
+                services to our customers. Whether you&apos;re planning a
+                weekend getaway or a business trip, we ensure your experience
+                with us is nothing short of excellent.
               </p>
               <ul className="mb-10">
                 <li className="flex items-center mb-4 text-base text-black-100">
