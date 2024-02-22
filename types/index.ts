@@ -79,6 +79,7 @@ export interface RentData {
   phone: string;
   address: string;
   car: CarProps;
+  createdAt: Date;
 }
 export interface LogInUser {
   firstName: string;
@@ -91,4 +92,13 @@ export interface ContactUs {
   phone: string;
   address: string;
   message: string;
+}
+export interface ChartData {
+  labels: string[];
+  datasets: {
+    label: string;
+    data: number[];
+    borderColor: string;
+    backgroundColor: string;
+  }[];
 }

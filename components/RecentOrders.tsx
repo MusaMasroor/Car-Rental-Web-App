@@ -4,7 +4,11 @@ import Image from "next/image";
 import { formatDistanceToNow } from "date-fns";
 import Loader from "./Loader";
 import { useState, useEffect } from "react";
-const RecentOrders = ({ rentData }) => {
+import { RentData } from "@/types";
+interface Props {
+  rentData: RentData[];
+}
+const RecentOrders: React.FC<Props> = ({ rentData }) => {
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     // Set isLoading to false once rentData is available

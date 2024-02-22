@@ -73,7 +73,7 @@ const CarOrders = () => {
                         <span>Rental No.</span>
                       </th>
                       <th className="px-6 py-3  text-black-100">Name</th>
-                      <th className="px-6 py-3  text-black-100">Email</th>{" "}
+                      <th className="px-6 py-3  text-black-100">Email</th>
                       <th className="px-6 py-3  text-black-100">Phone No.</th>
                       <th className="px-6 py-3  text-black-100">Address</th>
                       <th className="px-6 py-3  text-black-100">Status</th>

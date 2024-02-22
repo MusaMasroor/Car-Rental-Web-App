@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Bar } from "react-chartjs-2";
+import { ChartData } from "../types/index";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -22,7 +23,8 @@ ChartJS.register(
 );
 
 const BarChart = () => {
-  const [chartData, setChartData] = useState({
+  const [chartData, setChartData] = useState<ChartData>({
+    labels: [],
     datasets: [],
   });
 
