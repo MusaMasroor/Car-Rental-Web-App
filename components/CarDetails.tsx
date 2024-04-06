@@ -5,7 +5,7 @@ import Image from "next/image";
 import { generateCarImageUrl } from "@/utils";
 import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
-import { CustomButton, RentForm } from ".";
+import { CustomButton } from ".";
 import Link from "next/link";
 interface CarDetailsProps {
   isOpen: boolean;
@@ -57,7 +57,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                   <div className="flex-1 flex flex-col gap-3">
                     <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
                       <Image
-                        src={generateCarImageUrl(car)}
+                        src={generateCarImageUrl(car, "29")}
                         alt="car model"
                         fill
                         priority
@@ -117,7 +117,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                       ))}
                     </div>
                   </div>
-                  {/* <RentForm car={car} /> */}
+
                   <Link
                     href={{
                       pathname: "/rent-car",

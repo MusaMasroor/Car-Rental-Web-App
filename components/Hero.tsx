@@ -34,16 +34,15 @@ const Hero = () => {
     };
   }, []); // Empty dependency array ensures useEffect runs once
   return (
-    <div className="hero">
+    <div className="hero pt-16 md:pt-0">
+      {" "}
       <div className="flex-1 pt-36 padding-x">
         <h1 className="hero__title">
           Find, book, rent a car—quick and super easy!
         </h1>
-
         <p className="hero__subtitle">
           <span className="typed-text"></span>
         </p>
-
         <CustomButton
           title="Explore Cars"
           containerStyles="bg-red-700 text-white rounded-full mt-10"

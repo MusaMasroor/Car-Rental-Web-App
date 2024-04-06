@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
 import { z } from "zod";
-
+import Link from "next/link";
 const signInSchema = z.object({
   email: z.string().email(),
   password: z.string().min(6),
@@ -50,9 +50,6 @@ const SignIn: React.FC = () => {
       >
         <div className="w-full bg-white rounded-lg shadow border-2 dark:border-gray-700 md:mt-0 sm:max-w-md xl:p-0">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-            <p className="text-xl font-bold leading-tight tracking-tight text-black-100 md:text-2xl">
-              Enter Your Login Details
-            </p>
             <div>
               <label className="block mb-2 text-sm font-medium text-grey">
                 Email
@@ -76,6 +73,15 @@ const SignIn: React.FC = () => {
                 onChange={(e) => setData({ ...data, password: e.target.value })}
                 required
               />
+              <h1 className="block mt-2 text-sm font-medium text-grey">
+                Don't have an account ?{" "}
+                <Link
+                  href="/sign-up"
+                  className="font-bold text-black-100 underline"
+                >
+                  Sign Up
+                </Link>
+              </h1>
             </div>
 
             <button

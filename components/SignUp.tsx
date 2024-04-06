@@ -52,9 +52,6 @@ const SignUp: React.FC = () => {
       >
         <div className="w-full bg-white rounded-lg shadow border-2 dark:border-gray-700 md:mt-0 sm:max-w-md xl:p-0">
           <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
-            <p className="text-xl font-bold leading-tight tracking-tight text-black-100 md:text-2xl">
-              Enter Your Personal Details
-            </p>
             <div>
               <label className="block mb-2 text-sm font-medium text-grey">
                 First Name
