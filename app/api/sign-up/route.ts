@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import bcrypt from "bcrypt";
 import * as z from "zod";
 import { Role } from "@prisma/client";
+export const dynamic = "force-dynamic";
 // define a schema for input validation
 // const userSchema = z.object({
 //   username: z.string().min(1, "Username is required").max(100),
