@@ -74,7 +74,7 @@ const SignIn: React.FC = () => {
                 required
               />
               <h1 className="block mt-2 text-sm font-medium text-grey">
-                Don't have an account ?{" "}
+                Don&apos;t have an account ?{" "}
                 <Link
                   href="/sign-up"
                   className="font-bold text-black-100 underline"
