@@ -1,10 +1,10 @@
-# Use the official Node.js 16 image as the base image
+# Use the official Node.js image as the base image
 FROM node:latest
 
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json to the working directory
+# Copy package.json to the working directory
 COPY package.json .
 
 # Install dependencies
